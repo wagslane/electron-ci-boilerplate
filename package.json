@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "release": "electron-builder"
+    "release": "electron-builder",
+    "test": "echo success"
   },
   "repository": "https://github.com/lane-c-wagner/electron-ci-boilerplate",
   "keywords": [
