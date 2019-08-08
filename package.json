@@ -1,0 +1,48 @@
+{
+  "name": "electron-ci-boilerplate",
+  "version": "1.0.0",
+  "description": "A minimal Electron application that deploys on CI servers",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "release": "electron-builder"
+  },
+  "repository": "https://github.com/lane-c-wagner/electron-ci-boilerplate",
+  "keywords": [
+    "electron",
+    "ci",
+    "travis",
+    "tutorial",
+    "demo"
+  ],
+  "author": "lane-c-wagner",
+  "build": {
+    "appId": "tld.exampledomain.app",
+    "publish": "github",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "appImage": {
+      "license": "LICENSE"
+    },
+    "nsis": {
+      "createDesktopShortcut": "always",
+      "license": "LICENSE"
+    }
+  },
+  "devDependencies": {
+    "electron": "^4.0.1",
+    "electron-builder": "^21.2.0"
+  }
+}
