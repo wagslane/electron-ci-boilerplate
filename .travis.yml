@@ -33,7 +33,7 @@ cache:
     - $HOME/.cache/electron
     - $HOME/.cache/electron-builder
 
-# add git lfs
+# add git lfs for large file support
 before_install:
   - |
     if [ "$TRAVIS_OS_NAME" == "osx" ]; then
@@ -60,7 +60,7 @@ script:
 # only deploy to github on a merge to the prod branch
 deploy:
   provider: script
-  script: bash scripts/deploy.travis.sh
+  script: bash deploy.travis.sh
   skip_cleanup: true
   on:
     branch: prod
